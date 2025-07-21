@@ -9,48 +9,91 @@ body {
 ul {
     display: flex;
     list-style: none;
-    
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
 }
 
 ul li a {
     text-decoration: none;
     color: aliceblue;
-    
-    
 }
 
 .head {
     justify-content: space-between;
     display: flex;
-    margin-right: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
 }
 
 .head ul li {
     padding: 2px;
     margin: 7px;
-    
-    
 }
-.all{
+
+.all {
     padding: 0% 4rem;
 }
 
 .something {
     display: flex;
     color: aliceblue;
-    margin-right: 90px;
-    /* margin: 180px; */
     margin-top: 60px;
     padding-top: 4px;
-    padding-bottom:2px;
+    padding-bottom: 2px;
     justify-content: space-between;
     align-items: center;
-    
+    gap: 30px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .head ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .something {
+        flex-direction: column;
+        margin: 40px 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .something .image img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .word {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head ul li {
+        margin: 4px 0;
+    }
+
+    .hire-button {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
 }
 
 .something .image img {
     width: 100%;
-    height: 80%;
+    height: auto;
+    max-width: 400px;
 }
 
 .word {
@@ -95,7 +138,8 @@ section:nth-child(even) {
     color: lightskyblue;
     text-decoration: none;
 }
-.project .word  img{
+
+.project .word img {
     width: 20%;
-    height: 30% ;
+    height: 30%;
 }
